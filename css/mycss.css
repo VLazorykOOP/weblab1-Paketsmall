@@ -1,4 +1,132 @@
-h1 {
-  margin: 0; 
-  size: 12; 
+/* Селектори тегів */
+body, h1, h2, h3, p, ul, li, div {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Універсальний селектор */
+* {
+  box-sizing: border-box;
+}
+
+/* Селектори дочірніх елементів */
+div > h1 {
+  color: #333;
+}
+
+/* Селектори сусідів */
+h1 + p {
+  font-style: italic;
+}
+
+/* Селектори атрибутів */
+a[href] {
+  text-decoration: none;
+  color: blue;
+}
+
+a[href*="https"] {
+  color: green;
+}
+
+a[href|="http"] {
+  text-decoration: underline;
+}
+
+/* Псевдокласи */
+a:visited {
+  color: purple;
+}
+
+p:first-child {
+  font-weight: bold;
+}
+
+li:first-of-type {
+  font-size: 1.2em;
+}
+
+a:link {
+  color: #1a73e8;
+}
+
+h2:last-of-type {
+  margin-bottom: 20px;
+}
+
+/* Псевдоелементи */
+p::first-line {
+  text-transform: uppercase;
+}
+
+p::selection {
+  background-color: yellow;
+}
+
+/* Границі, заповнювачі та рамки */
+div {
+  border: 1px solid black;
+  padding: 20px;
+  margin-bottom: 10%;
+}
+
+p {
+  margin-right: 15px;
+  padding-bottom: 10px;
+  border-bottom-width: thin;
+  border-bottom-style: groove;
+}
+
+h2 {
+  border-top-style: ridge;
+  border-left-style: hidden;
+}
+
+/* Позиціювання елементів */
+img {
+  display: inline-block;
+  float: right;
+  margin: 0 15px;
+  max-width: 300px;
+}
+
+div.positioned {
+  position: absolute;
+  top: 50px;
+  left: 100px;
+  z-index: 10;
+}
+
+div.inline-table {
+  display: inline-table;
+}
+
+/* Візуалізація елементів */
+div.container {
+  max-width: 1200px;
+  min-height: 400px;
+  line-height: 1.5;
+}
+
+p.text-bottom {
+  vertical-align: text-bottom;
+}
+
+/* Відображення тексту */
+blockquote {
+  overflow: hidden;
+  visibility: visible;
+  clip: rect(10px, 100px, 50px, 0px);
+}
+
+/* Колір і фонові зображення */
+body {
+  background-color: #f0f0f0;
+}
+
+header {
+  background-image: url('header-bg.jpg');
+  background-attachment: scroll;
+  background-position: center;
 }
